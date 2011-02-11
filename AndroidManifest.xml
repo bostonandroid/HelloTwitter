@@ -11,6 +11,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="SuccessActivity" android:label="Success" />
+        <activity android:name="SuccessActivity" android:label="Success">
+          <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="hello-twitter" />
+          </intent-filter>
+        </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest> 
